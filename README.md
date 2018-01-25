@@ -1,2 +1,5 @@
-# Paul polanco Github Pages example
-GitHub Pages repo
+# Paul-Polanco Github Pages example
+
+ITSE1311 -Spring 2018 CTTC
+
+I prefer to use ATOM as my editor, but you can use whatever you want.
