@@ -1,2 +1,2 @@
-# ppolanco01.github.io
+# Paul polanco Github Pages example
 GitHub Pages repo
