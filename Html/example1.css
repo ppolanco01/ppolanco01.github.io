@@ -1,0 +1,26 @@
+<DOCTYPE html>
+
+<html>
+
+<head>
+ <title>example1.css</title>
+</head>
+p {
+  font-weight: bold;
+  color:gray;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+a {
+  color: red;
+}
+
+a:hover {
+  font-size: 1.1em;
+}
+
+p a {
+  color: yellow;
+}
