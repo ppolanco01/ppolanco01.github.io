@@ -1,0 +1,16 @@
+body {
+  margin-top: 80px;
+}
+
+.fixedheader {
+  font-size: 2em;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  background-color: white;
+
+}
