@@ -1,0 +1,39 @@
+.header {
+  background-color: lightblue;
+}
+
+.header li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header ul {
+  display: inline;
+  letter-spacing: 3px;
+  margin-right: justify;
+  padding-right: auto;
+}
+
+.banner {
+  background-color: lightgray;
+  margin: 20px auto;
+  width: 80%;
+  height: 309px;
+  background-image: url(https://goo.gl/ueE2SC);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header img {
+  width: 40px;
+}
+
+.schoolwrapper {
+  text-align: center;
+}
+
+.school {
+  display: inline-block;
+  width: 40%;
+  margin: auto;
+}
