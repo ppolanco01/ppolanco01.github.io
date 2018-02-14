@@ -10,10 +10,20 @@ function add() {
   boxes = Array.from(document.getElementsByClassName('numeric'));
   sum = 0;
   boxes.forEach(function(elem) {
-     sum += parseInt(elem.value);
+    sum += parseInt(elem.value);
   });
   document.getElementById('answer').innerHTML = sum;
 }
+
+function Median() {
+  boxes = Array.from(document.getElementsByClassName('numeric'));
+  sum = 0;
+  boxes.forEach(function(elem) {
+    sum += parseInt(elem.value);
+  });
+  document.getElementById('answer').innerHTML = sum;
+}
+
 
 function validateTextbox(textBox) {
   num = textBox.value;
@@ -28,8 +38,30 @@ function validateTextbox(textBox) {
 function setButtonState() {
   invalids = document.getElementsByClassName('invalid');
   if (invalids.length > 0) {
-      document.getElementById('addButton').disabled = true;
+    document.getElementById('addButton').disabled = true;
   } else {
     document.getElementById('addButton').disabled = false;
   }
+}
+
+function chooseAction() {
+  choice = document.getElementById('actionChoice');
+  action = choice[choice.selectedIndex];
+  button = document.getElementById('addButton');
+  if (action.value == 'add') {
+    button.innerHTML = "Add Up Contents";
+    button.setAttribute('onclick', 'add()');
+  }
+  if (action.value == 'average') {
+    button.innerHTML = "Average Contents";
+    button.setAttribute('onclick', 'average()');
+  }
+  if (action.value == 'median') {
+    button.innerHTML = "Get Median";
+    button.setAttribute('onclick', 'median()');
+  }
+}
+
+function setup() {
+  chooseAction();
 }
