@@ -1,16 +1,27 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 
 <html>
 
 <head>
-  <title>Dynamic Text Box example</title>
+  <title>Report Card Assignment</title>
   <link rel="stylesheet" type="text/css" href="dynamicTableExample.css">
   <script src="dynamicTableExample.js"></script>
 </head>
 
-<body onload='setup()'>
 
-  <table>
+<body onload='setup()'>
+  <div class="selection">
+    <select id="table" onchange='buildReportcard()'>
+      <option value="none">Please Select:</option>
+      <option value="0">Brianna Tucker</option>
+      <option value="1">Paul Polanco</option>
+      <option value="2">Justine Henderson</option>
+      <option value="3">Mathias Cobb</option>
+      <option value="4">Angela Walker</option>
+    </select>
+  </div>
+
+  <table class="tablewrapper">
     <tr>
       <th>Course</th>
       <th>Instructor</th>
@@ -19,10 +30,10 @@
       <th>Term 3</th>
       <th>Term 4</th>
       <th>Average</th>
-   </tr>
-   <tbody id='courseRows'>
-   </tbody>
-</table>
+    </tr>
+    <tbody id='courseRows'>
+    </tbody>
+  </table>
 
 
 </body>
