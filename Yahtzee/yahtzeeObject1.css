@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+}
+
+#playerInfo {
+  display: inline-block;
+  width: 300px;
+}
+#playerAvatar {
+  width: 100px;
+}
+
+#dicePanel {
+  display: inline-block;
+  width: 300px;
+}
+
+#dicePanel img {
+  width: 50px;
+}
+#roll {
+  background-color: #248ac4;
+  color: white;
+  padding: 7px;
+  font-size: 1.05em;
+  border-radius: 5px;
+}
+
+.saved {
+  border: solid 3px green;
+  border-radius: 10px;
+}
+
+table, tr, td {
+  border: solid 1px black;
+  background-color: #248ac4;
+  color: white;
+  border-collapse: collapse;
+}
+
+table {
+  margin: auto;
+}
+
+#scoreCard {
+  width: 500px;
+  margin: auto;
+}
