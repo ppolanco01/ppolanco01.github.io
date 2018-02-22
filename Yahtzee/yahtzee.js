@@ -1,6 +1,7 @@
 function setup() {
   loadPlayerInfo();
   loadDice();
+  loadScorecard();
 }
 
 function loadPlayerInfo() {
@@ -19,4 +20,32 @@ function loadDice() {
       img.className = "";
     }
   });
+}
+
+ function loadScorecard() {
+   // make TR and TD and insert into scoreRows
+   yahtzee.scoreCard.forEach(function(scoreCardRow) {
+     if (scoreCardRow.top) {
+       buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+     }
+   });
+   buildScoreCardRow("Top Subtotal", " ");
+   buildScoreCardRow("Top Bonus", " ");
+   yahtzee .scoreCard.forEach(function(scoreCardRow) {
+     if (!scoreCardRow.top) {
+       buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+     }
+   })
+   buildScoreCardRow("Total Score", " ");
+}
+
+function buildScoreCardRow(title, score) {
+  tr = document.createElement('tr');
+  td1 = document.createElement('td');
+  td1.innerHTML = title;
+  tr.appendChild(td1);
+  td2 = document.createElement('td');
+  td2.innerHTML = score;
+  tr.appendChild(td2);
+  document.getElementById('scoreRows').appendChild(tr);
 }

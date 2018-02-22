@@ -19,8 +19,8 @@ body {
   width: 50px;
 }
 #roll {
-  background-color: #248ac4;
-  color: white;
+  background-color: #00FFFF;
+  color: black;
   padding: 7px;
   font-size: 1.05em;
   border-radius: 5px;
@@ -33,9 +33,11 @@ body {
 
 table, tr, td {
   border: solid 1px black;
-  background-color: #248ac4;
-  color: white;
+  background-color: #00FFFF;
+  color: black;
   border-collapse: collapse;
+  border-spacing: 15px;
+  font-weight: bold;
 }
 
 table {
@@ -46,3 +48,5 @@ table {
   width: 500px;
   margin: auto;
 }
+
+body {background-color: lightgreen;}

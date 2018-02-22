@@ -72,6 +72,51 @@ yahtzee = {
     'score' : 0,
     'scoreCondition' : 'notSureYet',
     'scoreMath' : 'sumofDice'
+  },
+  {
+    'title' : 'Full House',
+    'top' : false,
+    'displaySequence' : 9,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofDice'
+  },
+  {
+    'title' : 'Small straight',
+    'top' : false,
+    'displaySequence' : 10,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofDice'
+  },
+  {
+    'title' : 'Large straight',
+    'top' : false,
+    'displaySequence' : 11,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofDice'
+  },
+  {
+    'title' : 'Chance',
+    'top' : false,
+    'displaySequence' : 12,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofDice'
+  },
+  {
+    'title' : 'Yahtzee',
+    'top' : false,
+    'displaySequence' : 13,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofDice'
   }
 ]
 }
