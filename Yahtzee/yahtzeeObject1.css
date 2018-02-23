@@ -7,20 +7,24 @@ body {
   width: 300px;
 }
 #playerAvatar {
-  width: 100px;
+  width: 150px;
 }
 
 #dicePanel {
   display: inline-block;
-  width: 300px;
+  width: 310px;
+  background-image: url(tabletop.jpeg);
+  height: 190px;
+  padding-top: 96px;
 }
 
 #dicePanel img {
   width: 50px;
 }
+
 #roll {
-  background-color: #00FFFF;
-  color: black;
+  background-color: #FF0000;
+  color: white;
   padding: 7px;
   font-size: 1.05em;
   border-radius: 5px;
@@ -33,8 +37,7 @@ body {
 
 table, tr, td {
   border: solid 1px black;
-  background-color: #00FFFF;
-  color: black;
+  color: white;
   border-collapse: collapse;
   border-spacing: 15px;
   font-weight: bold;
@@ -44,9 +47,26 @@ table {
   margin: auto;
 }
 
-#scoreCard {
-  width: 500px;
-  margin: auto;
+td {
+  padding: 8px;
 }
 
-body {background-color: lightgreen;}
+#scoreCard {
+  width: 170px;
+  margin-left: 200px;
+  padding: 4px;
+  background-color: #FF0000;
+}
+
+body {background-color: black;}
+
+h3 {
+  color: white;
+  font-size: 3.1em;
+  background-image: url(red.jpeg);
+}
+
+#playerName {
+  color: white;
+  font-size: -webkit-xxx-large;
+}

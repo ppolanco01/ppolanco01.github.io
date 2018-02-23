@@ -33,7 +33,7 @@ yahtzee = {
     'top' : true,
     'displaySequence' : 1,
     'scoreRecorded' : false,
-    'score' : 0,
+    'score' : 6,
     'scoreCondition' : 'notSureYet',
     'scoreMath' : 'sumOfOnes'
   },
@@ -48,6 +48,33 @@ yahtzee = {
   },
   {
     'title' : 'Threes',
+    'top' : true,
+    'displaySequence' : 3,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofThrees'
+  },
+  {
+    'title' : 'Fours',
+    'top' : true,
+    'displaySequence' : 3,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofThrees'
+  },
+  {
+    'title' : 'Fives',
+    'top' : true,
+    'displaySequence' : 3,
+    'scoreRecorded' : false,
+    'score' : 0,
+    'scoreCondition' : 'notSureYet',
+    'scoreMath' : 'sumofThrees'
+  },
+  {
+    'title' : 'Sixes',
     'top' : true,
     'displaySequence' : 3,
     'scoreRecorded' : false,
