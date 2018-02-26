@@ -19,13 +19,14 @@
     <label id="playerName">This is my Name</label>
   </div>
   <div id="dicePanel">
-    <img id="die0" src="one.png" class="saved">
-    <img id="die1" src="two.png">
-    <img id="die2" src="three.png" class="saved">
-    <img id="die3" src="four.png">
-    <img id="die4" src="five.png">
+    <label>Throws Remaining: <span id="throwsRemainLabel"></span><br></label>
+    <img id="die0"  onclick="saveDie(0)">
+    <img id="die1"  onclick="saveDie(1)">
+    <img id="die2"  onclick="saveDie(2)">
+    <img id="die3"  onclick="saveDie(3)">
+    <img id="die4"  onclick="saveDie(4)">
     <br>
-    <button id="roll">Roll Dice</button>
+    <button id="roll" onclick="rollDice()">Roll Dice (<span id="throwsRemain"></span>)</button>
   </div>
   <div id="scorecard">
     <table>
