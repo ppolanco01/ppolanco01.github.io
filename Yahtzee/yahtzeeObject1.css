@@ -72,3 +72,17 @@ h3 {
   color: white;
   font-size: -webkit-xxx-large;
 }
+
+.unscored {
+  background-color: yellow;
+  color: black;
+}
+
+.unscored:hover {
+  cursor: pointer;
+}
+
+.totals {
+  background-color: black;
+  color: white;
+}
