@@ -1,6 +1,6 @@
 yahtzee = {
-  'turnsRemanining' : 13,
-  'throwsRemaniningInTurn' : 3,
+  'turnsRemaining' : 13,
+  'throwsRemainingInTurn' : 3,
   'player' : {
     'name' : 'Paul',
     'avatar' : 'avatar.jpeg'
@@ -41,7 +41,7 @@ yahtzee = {
     'title' : 'Twos',
     'top' : true,
     'displaySequence' : 2,
-    'scoreRecorded' : true,
+    'scoreRecorded' : false,
     'score' : 0,
     'scoreCondition' : 'notSureYet',
     'scoreMath' : 'sumofThrees'

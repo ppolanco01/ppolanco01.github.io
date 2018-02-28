@@ -30,6 +30,17 @@ body {
   border-radius: 5px;
 }
 
+#game {
+  background-color: #FF0000;
+  color: white;
+  padding: 7px;
+  font-size: 1.05em;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
 
 
 .saved {
