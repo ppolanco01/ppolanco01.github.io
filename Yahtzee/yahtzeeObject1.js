@@ -34,8 +34,8 @@ yahtzee = {
     'displaySequence' : 1,
     'scoreRecorded' : false,
     'score' : 6,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumOfOnes'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 1]
   },
   {
     'title' : 'Twos',
@@ -43,8 +43,8 @@ yahtzee = {
     'displaySequence' : 2,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofThrees'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 2]
   },
   {
     'title' : 'Threes',
@@ -52,8 +52,8 @@ yahtzee = {
     'displaySequence' : 3,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofThrees'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 3]
   },
   {
     'title' : 'Fours',
@@ -61,8 +61,8 @@ yahtzee = {
     'displaySequence' : 3,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofThrees'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 4]
   },
   {
     'title' : 'Fives',
@@ -70,8 +70,8 @@ yahtzee = {
     'displaySequence' : 3,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofThrees'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 5]
   },
   {
     'title' : 'Sixes',
@@ -79,8 +79,8 @@ yahtzee = {
     'displaySequence' : 3,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofThrees'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 6]
   },
   {
     'title' : 'Three of a Kind',
@@ -88,8 +88,8 @@ yahtzee = {
     'displaySequence' : 7,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['ofAKind', 3],
+    'scoreMath' : ['sum', 0]
   },
   {
     'title' : 'Four of a Kind',
@@ -97,8 +97,8 @@ yahtzee = {
     'displaySequence' : 8,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['ofAKind', 4],
+    'scoreMath' : ['sum', 0]
   },
   {
     'title' : 'Full House',
@@ -106,8 +106,8 @@ yahtzee = {
     'displaySequence' : 9,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['ofAKind', 2, 3],
+    'scoreMath' : ['const', 25]
   },
   {
     'title' : 'Small straight',
@@ -115,8 +115,8 @@ yahtzee = {
     'displaySequence' : 10,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['inArow', 4],
+    'scoreMath' : ['const', 30]
   },
   {
     'title' : 'Large straight',
@@ -124,8 +124,8 @@ yahtzee = {
     'displaySequence' : 11,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['inARow', 5],
+    'scoreMath' : ['const', 40]
   },
   {
     'title' : 'Chance',
@@ -133,8 +133,8 @@ yahtzee = {
     'displaySequence' : 12,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['none'],
+    'scoreMath' : ['sum', 0]
   },
   {
     'title' : 'Yahtzee',
@@ -142,8 +142,8 @@ yahtzee = {
     'displaySequence' : 13,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : 'notSureYet',
-    'scoreMath' : 'sumofDice'
+    'scoreCondition' : ['ofAKind', 5],
+    'scoreMath' : ['const', 50]
   }
 ]
 }

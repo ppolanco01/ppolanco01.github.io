@@ -13,7 +13,7 @@ body {
 #dicePanel {
   display: inline-block;
   width: 310px;
-  background-image: url(tabletop.jpeg);
+  background-image: url(tabletop.jpeg);   
   height: 190px;
   padding-top: 96px;
 }

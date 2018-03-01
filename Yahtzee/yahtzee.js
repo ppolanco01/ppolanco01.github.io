@@ -1,4 +1,7 @@
+newGameObject = {};
+
 function setup() {
+  newGameObject = yahtzee;
   loadPlayerInfo();
   loadDice();
   loadScorecard();
@@ -62,7 +65,7 @@ function buildScoreCardRow(title, score, columnClassName, clickable, scorecardIn
   td2.innerHTML = score;
   td2.className = columnClassName;
   if (clickable) {
-      td2.setAttribute('data-scoreIndex', scorecardIndex);
+    td2.setAttribute('data-scoreIndex', scorecardIndex);
     td2.onclick = saveScore;
   }
   tr.appendChild(td2);
@@ -85,13 +88,13 @@ function saveScore() {
 }
 
 function rollDice() {
-  // TODO: Do not allow roll if all dice saved
   rerolled = false;
   if (yahtzee.throwsRemainingInTurn > 0) {
     yahtzee.dice.forEach(function (die) {
       if (!die.saved) {
         die.sideUp = Math.floor(Math.random() * 6) + 1;
         rerolled = true;
+        calculateScores();
       }
     });
     if (rerolled)
@@ -107,8 +110,59 @@ function saveDie(dieIndex) {
   }
 }
 
+function calculateScores() {
+  yahtzee.scoreCard.forEach(function (scoreCardRow) {
+    if (!scoreCardRow.scoreRecorded) {
+      if (conditionIsMet(scoreCardRow.scoreCondition)) {
+        if (scoreCardRow.scoreMath[0] == 'const') {
+          scoreCardRow.score = scoreCardRow.scoreMath[1];
+        }
+      }
+      if (scoreCardRow.scoreMath[0] == 'sum') {
+        scoreCardRow.score = sumOfDice(scoreCardRow.scoreMath[1]);
+      }
+    } else {
+      scoreCardRow.score = 0;
+    }
+  });
+  loadScorecard();
+}
 
+function sumOfDice(valueToMatch) {
+  total = 0;
+  yahtzee.dice.forEach(function (die) {
+    if (die.sideUp == valueToMatch || valueToMatch === 0) {
+      total += die.sideUp;
+    }
+  })
+  return total;
+}
 
+function conditionIsMet (condition) {
+  if (condition[0] == 'none') {
+    return true;
+  }
+  if (condition[0] == 'ofAKind') {
+    return ofAKind(condition);
+  }
+  if (condition[0] == 'inArow') {
+    return inARow(condition);
+  }
+  return false;
+}
+
+function ofAKind(condition) {
+  return false;
+}
+
+function inARow(condition) {
+  return false;
+}
+
+function EndGame() {
+  yahtzee = newGameObject;
+  setup();
+}
 
 
 
