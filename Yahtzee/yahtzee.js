@@ -1,7 +1,7 @@
 newGameObject = {};
 
 function setup() {
-  newGameObject = yahtzee;
+  newGameObject = JSON.parse(JSON.stringify(yahtzee));
   loadPlayerInfo();
   loadDice();
   loadScorecard();
@@ -160,7 +160,7 @@ function inARow(condition) {
 }
 
 function EndGame() {
-  yahtzee = newGameObject;
+  yahtzee = JSON.parse(JSON.stringify(newGameObject));
   setup();
 }
 

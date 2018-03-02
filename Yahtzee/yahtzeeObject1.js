@@ -34,7 +34,7 @@ yahtzee = {
     'displaySequence' : 1,
     'scoreRecorded' : false,
     'score' : 6,
-    'scoreCondition' : ['none'],
+    'scoreCondition' : ['none'],   
     'scoreMath' : ['sum', 1]
   },
   {
