@@ -2,7 +2,7 @@ yahtzee = {
   'turnsRemaining' : 13,
   'throwsRemainingInTurn' : 3,
   'player' : {
-    'name' : 'Paul',
+    'name' : 'Paul',   
     'avatar' : 'avatar.jpeg'
   },
   'dice' : [
@@ -34,7 +34,7 @@ yahtzee = {
     'displaySequence' : 1,
     'scoreRecorded' : false,
     'score' : 6,
-    'scoreCondition' : ['none'],   
+    'scoreCondition' : ['none'],
     'scoreMath' : ['sum', 1]
   },
   {

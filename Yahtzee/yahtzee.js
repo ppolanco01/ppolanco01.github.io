@@ -1,8 +1,8 @@
 newGameObject = {};
 
 function setup() {
+  loadModal();
   newGameObject = JSON.parse(JSON.stringify(yahtzee));
-  loadPlayerInfo();
   loadDice();
   loadScorecard();
 }
@@ -117,12 +117,12 @@ function calculateScores() {
         if (scoreCardRow.scoreMath[0] == 'const') {
           scoreCardRow.score = scoreCardRow.scoreMath[1];
         }
+        if (scoreCardRow.scoreMath[0] == 'sum') {
+          scoreCardRow.score = sumOfDice(scoreCardRow.scoreMath[1]);
+        }
+      } else {
+        scoreCardRow.score = 0;
       }
-      if (scoreCardRow.scoreMath[0] == 'sum') {
-        scoreCardRow.score = sumOfDice(scoreCardRow.scoreMath[1]);
-      }
-    } else {
-      scoreCardRow.score = 0;
     }
   });
   loadScorecard();
@@ -136,6 +136,23 @@ function sumOfDice(valueToMatch) {
     }
   })
   return total;
+}
+
+function loadModal() {
+  modal = document.getElementsByClassName('modal-wrapper')[0];
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  name = document.getElementById('nameInput').value;
+  if (name.length > 0) {
+    yahtzee.player.name = name;
+    checkedImage = document.querySelector('input[name=avatar][checked]').value;
+    yahtzee.player.avatar = checkedImage;
+    modal = document.getElementsByClassName('modal-wrapper')[0];
+    modal.style.display = "none";
+    loadPlayerInfo();
+  }
 }
 
 function conditionIsMet (condition) {

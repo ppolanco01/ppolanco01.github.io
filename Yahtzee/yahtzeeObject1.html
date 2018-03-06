@@ -1,46 +1,56 @@
 <DOCTYPE html>
 
-<html>
+  <html>
 
-<head>
-  <title>Play Yahtzee!</title>
-  <link rel="stylesheet" type="text/css" href="yahtzeeObject1.css">
-  <script src="yahtzeeObject1.js"></script>
-  <script src="yahtzee.js"></script>
-</head>
+  <head>
+    <title>Play Yahtzee!</title>
+    <link rel="stylesheet" type="text/css" href="yahtzeeObject1.css">
+    <script src="yahtzeeObject1.js"></script>
+    <script src="yahtzee.js"></script>
+  </head>
 
-<body onload='setup()'>
-  <div id="title">
-    <h3>Play Yahtzee!</h3>
-  </div>
-  <div id="playerInfo">
-    <img id="playerAvatar" src="avatar.jpeg">
-    <br>
-    <label id="playerName">This is my Name</label>
-  </div>
-  <div id="dicePanel">
-    <label>Throws Remaining: <span id="throwsRemainLabel"></span><br></label>
-    <img id="die0"  onclick="saveDie(0)">
-    <img id="die1"  onclick="saveDie(1)">
-    <img id="die2"  onclick="saveDie(2)">
-    <img id="die3"  onclick="saveDie(3)">
-    <img id="die4"  onclick="saveDie(4)">
-    <br>
-    <button id="roll" onclick="rollDice()">Roll Dice (<span id="throwsRemain"></span>)</button>
-    <br>
-    <button id="game" onclick="EndGame()">Game Over Play Again</button>
-  </div>
-  <div id="scorecard">  
-    <table>
-      <tr>
-        <th></th>
-        <th>Score</th>
-      </tr>
-      <tbody id="scoreRows">
+  <body onload='setup()'>
+    <div id="title">
+      <h3>Play Yahtzee!</h3>
+    </div>
+    <div id="playerInfo">
+      <img id="playerAvatar" src="avatar.jpeg">
+      <br>
+      <label id="playerName">This is my Name</label>
+    </div>
+    <div id="dicePanel">
+      <label>Throws Remaining: <span id="throwsRemainLabel"></span><br></label>
+      <img id="die0"  onclick="saveDie(0)">
+      <img id="die1"  onclick="saveDie(1)">
+      <img id="die2"  onclick="saveDie(2)">
+      <img id="die3"  onclick="saveDie(3)">
+      <img id="die4"  onclick="saveDie(4)">
+      <br>
+      <button id="roll" onclick="rollDice()">Roll Dice (<span id="throwsRemain"></span>)</button>
+      <br>
+      <button id="game" onclick="EndGame()">Game Over Play Again</button>
+    </div>
+    <div class="modal-wrapper">
+      <div class="modal-content">
+        <label>Enter your name: <input id="nameInput" type="text"></label>
+        <button onclick="closeModal()">Play Yahtzee!</button>
+        <br>
+        <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/6/" checked><img src="https://lorempixel.com/200/200/people/6/">
+        <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/2/"><img src="https://lorempixel.com/200/200/people/2/">
+        <input type="radio" name="avatar" value="https://lorempixel.com/200/200/people/8/"><img src="https://lorempixel.com/200/200/people/8/">
+      </div>
+    </div>
+    <div id="scorecard">
+      <table>
+        <tr>
+          <th></th>
+          <th>Score</th>
+        </tr>
+        <tbody id="scoreRows">
 
-    </tbody>
-  </table>
-  </div>
-</body>
+        </tbody>
+      </table>
+    </div>
+  </body>
 
-</html>
+  </html>
