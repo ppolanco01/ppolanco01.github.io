@@ -2,28 +2,28 @@ yahtzee = {
   'turnsRemaining' : 13,
   'throwsRemainingInTurn' : 3,
   'player' : {
-    'name' : 'Paul',   
+    'name' : 'Paul',
     'avatar' : 'avatar.jpeg'
   },
   'dice' : [
     {
-      'sideUp' : 0,
+      'sideUp' : 6,
       'saved' : false
     },
     {
-      'sideUp' : 0,
+      'sideUp' : 6,
       'saved' : false
     },
     {
-      'sideUp' : 0,
+      'sideUp' : 6,
       'saved' : false
     },
     {
-      'sideUp' : 0,
+      'sideUp' : 2,
       'saved' : false
     },
     {
-      'sideUp' : 0,
+      'sideUp' : 1,
       'saved' : false
     },
   ],
@@ -115,7 +115,7 @@ yahtzee = {
     'displaySequence' : 10,
     'scoreRecorded' : false,
     'score' : 0,
-    'scoreCondition' : ['inArow', 4],
+    'scoreCondition' : ['inARow', 4],
     'scoreMath' : ['const', 30]
   },
   {

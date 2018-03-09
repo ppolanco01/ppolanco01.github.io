@@ -160,19 +160,66 @@ function conditionIsMet (condition) {
     return true;
   }
   if (condition[0] == 'ofAKind') {
-    return ofAKind(condition);
+    return ofAkind(condition[1]);
   }
-  if (condition[0] == 'inArow') {
-    return inARow(condition);
+  if (condition[0] == 'inARow') {
+    return inARow(condition[1]);
   }
   return false;
 }
 
-function ofAKind(condition) {
+function ofAkind(numberToMatch) {
+  for (i = 1; i <= 6; i++) {
+    found = 0;
+    yahtzee.dice.forEach(function(die) {
+      if (die.sideUp == i) {
+        found++;
+      }
+    });
+    console.log("looking for: " + i + ", Found: " + found);
+    if (found >= numberToMatch)
+    return true;
+  }
   return false;
 }
 
-function inARow(condition) {
+function fourinARow(anArray) {
+  for (i=1; i<=3; i++) {
+    found = true;
+    for (j=i; j<=i+3; j++) {
+      if (!anArray.includes(j))
+        found = false;
+    }
+    if (found)
+      return true;
+  }
+  return false;
+}
+
+function fiveinARow(anArray) {
+  for (i=1; i<=2; i++) {
+    found = true;
+    for (j=i; j<=i+4; j++) {
+      if (!anArray.includes(j))
+        found = false;
+    }
+    if (found)
+      return true;
+  }
+  return false;
+}
+
+console.log(ofAkind(3));
+
+function inARow(numberToMatch) {
+  anArray = [];
+  yahtzee.dice.forEach(function (die) {
+    anArray.push(die.sideUp);
+  });
+  if (numberToMatch == 4)
+  return fourinARow(anArray);
+  if (numberToMatch == 5)
+  return fiveinARow(anArray);
   return false;
 }
 
